@@ -4,7 +4,15 @@
 {% block content %}
 
 
+{% for zayavka in zayavki %}
 
+<div>
+    <span> {{zayavka.type}} </span>
+    <span> - </span>
+    <span> {{zayavka.status}} </span>
+</div>
+
+{% endfor %}
 
 
 {% endblock content %}

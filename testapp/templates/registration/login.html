@@ -5,6 +5,17 @@
 
 
 
+<form method="POST" action="{% url 'login' %}">
+
+    {% csrf_token %}
+
+    <input name="username" type="text" placeholder="Имя пользователя">
+    <input name="password" type="password" placeholder="Пароль">
+
+    <button>Войти</button>
+
+</form>
+
 
 
 {% endblock content %}

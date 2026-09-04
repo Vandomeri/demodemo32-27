@@ -10,7 +10,25 @@
     <header>
         <div>LOGO</div>
 
-        <nav></nav>
+        <nav>
+
+            {% if user.is_authenticated %}
+
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button>Выход</button>
+            </form>
+
+
+            {% else %}
+
+            <a href="/accounts/login">Вход</a>
+
+            {% endif %}
+
+
+        </nav>
+
     </header>
 
     <main>{% block content %}{% endblock content %}</main>
